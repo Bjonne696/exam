@@ -9,9 +9,9 @@ const options = {
 	}
 };
 
-async function getResult(resultId) {
+async function getResult(resultid) {
   try {
-    console.log(resultId);
+    console.log(resultid);
     const response = await fetch(
         'https://tasty.p.rapidapi.com/recipes/list?from=0&size=40&tags=under_30_minutes', options + resultId
     );
@@ -20,7 +20,7 @@ async function getResult(resultId) {
     console.log(foodArray);
 
 
-    document.title = foodArray.name;
+   /* document.title = foodArray.name;
     document.querySelector('h1').innerHTML = `${foodArray.name}`;
     document.querySelector(
       '.hero__img'
@@ -29,6 +29,7 @@ async function getResult(resultId) {
     document.querySelector('.sections').innerHTML = `shitTIbuy: ${mtgArray.sections}`;
     document.querySelector('.instructions').innerHTML = `shtTIdo: ${mtgArray.instructions}`;
     document.querySelector('.yields').innerHTML = `howMUCH: ${mtgArray.yields}`;
+    */
 } catch (error) {
 
 } finally {
