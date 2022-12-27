@@ -9,14 +9,14 @@ const options = {
 	}
 };
 
-async function getResult(resultId) {
+async function getResult(foodId) {
   try {
-    console.log(resultId);
+    console.log(foodId);
     const response = await fetch(
-        'https://tasty.p.rapidapi.com/recipes/list?from=0&size=40&tags=under_30_minutes', options + resultId
+        'https://tasty.p.rapidapi.com/recipes/list?from=0&size=40&tags=under_30_minutes', options + foodId
     );
     const jsonResults = await response.json();
-    const foodArray = jsonResults.resultId;
+    const foodArray = jsonResults.foodId;
     console.log(foodArray);
 
 
