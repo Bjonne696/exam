@@ -36,4 +36,4 @@ async function getResult(resultId) {
 }
 }
 
-getMagic(id);
+getResult(id);
