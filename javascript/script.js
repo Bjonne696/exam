@@ -6,10 +6,10 @@ const options = {
 	}
 };
 
-/* fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=40&tags=under_30_minutes', options)
+ fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=40&tags=under_30_minutes', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
-	.catch(err => console.error(err)); */
+
     
    /*
     fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=40&tags=under_30_minutes', options)
@@ -32,7 +32,3 @@ const options = {
             return createdResponse;
         } */
         
-        fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=40&tags=under_30_minutes', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
