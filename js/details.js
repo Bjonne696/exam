@@ -33,8 +33,8 @@ async function getResult(resultId) {
 
       document.querySelector('h1').innerHTML = `${jsonResults.name}`;
       document.querySelector('.time').innerHTML = `${jsonResults.total_time_minutes}`;
-      document.querySelector('.sections').innerHTML = `${jsonResults.sections}`;
-      document.querySelector('.instructions').innerHTML = `${jsonResults["instructions"]}`; /* maybe not [] */
+      document.querySelector('.sections').innerHTML = `${jsonResults.sections[0].components[0].raw_text}`;
+      document.querySelector('.instructions').innerHTML = `${jsonResults.instructions[0].display_text}`;
       document.querySelector('.yields').innerHTML = `${jsonResults.yields}`;
 
 
