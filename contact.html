@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Food recipe blog for foodies, contact form"> 
+    <meta name="keywords" content="food recipes, recipes, healthy food, food, contact">
+    <meta name="author" content="Bjørn-Tore Moskaug Jaavall">
+    <title>Contact | Good Food Mood</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://use.typekit.net/qrb0dfq.css">
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img class = logo src="images/logo.png" alt="Good food mood's logo. A chefs hat with Good Food Mood written in a circle around it."></a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <p class="header-text">Home</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <p class="header-text">About</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">
+                        <p class="header-text">Recipes</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link-current">
+                        <p class="header-text">Contact</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+
+      
+            <form>
+                <label for="firstname">Full name</label>
+                <input type="text" name="name" id="name">
+                <p class="formError nameError">Please enter a full name</p>
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject">
+                <p class="formError subjectError">Subject must contain 15 characters</p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <p class="formError emailError">Please enter a valid email</p>
+                <label for="text">Message</label> 
+                <input type="text" name="message" id="message">
+                <p class="formError messageError">Text must contain 25 characters</p>
+        
+                <button id="submit">Submit</button>
+            </form>
+          </div>
+
+        <script src="js/components/alert.js"></script>
+        <script src="js/contact.js"></script>
+
+    </main>
+    <footer><h3>CREATED BY BJØRN-TORE MOSKAUG JAAVALL</h3></footer>
+
+    
+</body>
+</html>

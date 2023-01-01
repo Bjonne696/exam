@@ -9,17 +9,6 @@ const options = {
 	}
 };
 
-/*
-async function getResult(resultId) {
-  try {
-    console.log(resultId);
-    const response = await fetch(
-        'https://tasty.p.rapidapi.com/recipes/get-more-info?'+ resultId, options
-    );
-    const jsonResults = await response.json();
-    const foodArray = jsonResults.results();
-    console.log(foodArray);
-*/
 
 async function getResult(resultId) {
   try {
@@ -33,14 +22,37 @@ async function getResult(resultId) {
 
       document.querySelector('h1').innerHTML = `${jsonResults.name}`;
       document.querySelector('.time').innerHTML = `${jsonResults.total_time_minutes}`;
-      document.querySelector('.sections').innerHTML = `${jsonResults.sections[0].components[0].raw_text}`;
-      document.querySelector('.instructions').innerHTML = `${jsonResults.instructions[0].display_text}`;
       document.querySelector('.yields').innerHTML = `${jsonResults.yields}`;
 
+/* instructions */
+      let instructArray = jsonResults['instructions'];
+      let htmlString = "";
+      let htmlStringA = "";
 
+      for (let i=0, len=instructArray.length; i<len; i++){
+        htmlString += `<div>${instructArray[i].display_text}</div>`;
+        console.log(instructArray[i].display_text);
+      }
 
+      document.querySelector('.instructions').innerHTML = htmlString;
 
- 
+      
+/* components */
+
+var sections = jsonResults['sections']
+for(var i = 0; i < sections.length; i++){
+
+  console.log("component: " + (i+1));
+  var components = sections[i].components;
+  for(var j = 0; j < components.length; j++){
+    htmlStringA += `<div>${components[j].raw_text}</div>`;
+    console.log(components[j].raw_text);
+    
+  }
+}
+
+document.querySelector('.sections').innerHTML = htmlStringA;
+
 
 
 /*

@@ -4,19 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Food recipe blog for foodies, details section"> 
+    <meta name="keywords" content="food recipes, recipes, healthy food, food,">
+    <meta name="author" content="Bjørn-Tore Moskaug Jaavall">
+    <title>Recipe| Good Food Mood</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/qrb0dfq.css">
     <script src="js/details.js"></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="index.html"><img class = logo src="images/logo.png" alt="Good food mood's logo. A chefs hat with Good Food Mood written in a circle around it."></a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <p class="header-text">Home</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <p class="header-text">About</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">
+                        <p class="header-text">Recipes</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <p class="header-text">Contact</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
+        <div class = details-container>
 
             <h1></h1>
-            <div class="time"></div>
-            <div class="sections"></div>
-            <div class="instructions"></div>
-            <div class="yields"></div>
-
-
+            <H2> Time measured in minutes:</H2>
+            <div><p class="time"></p></div>
+            <h3>Ingredients needed:</h3>
+            <div><p class="sections"></p></div>
+            <h3>Instructions:</h3>
+            <div><p class="instructions"></p></div>
+            <h3>Yields:</h3>
+            <div><p class="yields"></p></div>
+        </div>
     </main>
+    <footer><h3>CREATED BY BJØRN-TORE MOSKAUG JAAVALL</h3></footer>
 </body>
 </html>

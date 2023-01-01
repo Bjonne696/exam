@@ -1,0 +1,513 @@
+ /* GLOBAL */
+
+  
+  body {
+    margin:0px;
+    background-color: #fdf7e3;
+    font-size :62.5%; 
+ 
+  }
+
+  h1 {
+    font-family: bd-supper, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.4rem;
+    border: 5px solid #00000000;
+
+  }
+  
+  h2 {
+    font-size: 1.26rem;
+    font-family: big-caslon-fb, serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  h3 {
+    font-size:1.15rem;
+    font-family: reklame-script, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+  }
+
+  p {
+
+    font-family: embury-text, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+ 
+  }
+
+  footer {
+    background-color: #292C3F;
+    color: #fdf7e3;
+    height: 60px;
+    position: fixed;
+    bottom: 0px;
+    width:100vw;
+  }
+
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid darkred;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-left: 50%;
+    margin-top: 80px;
+    animation: spin 2s linear infinite;
+  }
+
+  .loaderText {
+    margin-top: -80px;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+
+ /* HEADER AND NAV */
+ header {
+    background-color: #a73333;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 5px 5px 5px #000000;
+    margin: 0px;
+}
+
+.logo {
+  margin-right: 5vw;
+}
+
+.header-text {
+    margin-left: 4.5vw;
+    margin-right: 4.5vw;
+    padding: 0px;
+    font-size:2rem ;
+}
+
+
+
+
+
+.nav-list {
+    justify-content: right;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    border: 0px;
+    margin: 0.5vw;
+    float: right;
+    margin-top: 50px;
+  }
+  
+  .nav-item {
+    margin: 0.5rem;
+  }
+  
+  .nav-link {
+    color: #fdf7e3;
+    text-decoration: none;
+    text-shadow: 5px 5px 5px #000000;
+  }
+  
+  .nav-link-current {
+    text-decoration: none;
+    color: #cee025;
+    text-shadow: 5px 5px 5px #000000;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header-text{
+      font-size: 15px;
+      margin-left: 5px;
+      margin-left: 5px;
+    }
+    .logo { margin:0px;
+    width:15%;
+    height:auto;}
+    .nav-list{ margin:0px}
+    .nav-item {margin:0px}
+    .nav-list{padding:0px}
+    .nav-list{margin: 15px;} 
+  }
+  /* HOME */
+
+  .home-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .home-image {
+    max-width: 60%;
+    height: auto;
+    margin-left: 120px;
+  }
+
+  .home{
+    text-align: center;
+  }
+
+  .home-text {
+    font-size: 1.2rem;
+  }
+
+
+  /* CARUSEL */
+
+
+  * {box-sizing:border-box}
+
+  /* Slideshow container */
+  .slideshow-container {
+    width: 650px;
+    height:500px;
+    position: relative;
+    margin: auto;
+    background-color: #fdf7e3;
+    color: #292C3F;
+    border-color: #a73333;
+    border-width: 10px;
+    border-style: double solid;
+    border-radius: 25px;
+    margin-right:120px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .home-container {
+      position: relative;
+    }
+    .home-image {
+    display:none;
+    }
+    .slideshow-container {
+      position: absolute;
+      margin:0px;
+      width: 385px;
+      }
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+  display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #292C3F;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #faea71;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #292C3F;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .slider-link{
+    text-decoration: none;
+    color: #292C3F;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #292C3F;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+
+
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* GALLERY  */
+
+  .recipe-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .cards {
+    position: relative;
+    text-align: center;
+    margin: 60px;
+    max-width: 600px;
+    max-height: 365px;
+    border-style: solid;
+    border-color: #cee025;
+    border-width: 5px;
+    border-radius: 25px;
+    padding:0px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .thumbnail{display: none;}
+    .cards{
+      margin:0px 0px 0px 0px;
+      max-width:300px;
+      max-height:350px;
+      margin-bottom:5px;
+      overflow-x: auto;}
+    .responsive{
+      font-size: 14px;
+      padding:10px;}
+    .gallery-link{
+      padding:0px;
+    }
+  }
+
+  .title-name {
+    background-color: #faea71;
+    color: #292C3F;
+    margin: 0px;
+    padding: 2px;
+    border-radius: 20px 20px 0px 0px;
+ 
+  }
+
+  .description-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 580px;
+
+  }
+
+  .thumbnail{
+    flex-shrink: 0;
+    max-width: 250px;
+    height:250px;
+
+  }
+
+  .gallery-link {
+    background-color: #a73333;
+    margin:0px;
+    padding:11.5px;
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .link-text{
+    color: #cee025;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .margin{
+    margin:40px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #292C3F;
+    color: #fdf7e3;
+    padding:20px;
+    padding-left: 80px;
+  }
+
+  .load-more-btn {
+    display: block;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .load-more-btn button {
+    padding: 1rem 1rem;
+    width: auto;
+    color: #292C3F;
+    background-color: #cee025;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }  
+   
+  .load-more-btn button:hover {
+    background-color: #faea71;
+  }
+  
+  .load-more-btn button:active {
+    background-color: #cee025;
+  }
+  
+
+.details-container{
+  border: 3px #cee025;
+  border-style: double groove;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius:25px;
+  border-width: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+}
+
+/*    ABOUT   */
+
+.about-header{
+  text-align: center;
+  margin: 50px;
+
+}
+
+.about1{
+background-color: #292C3F ;
+padding-top:2px;
+padding-bottom: 20px;
+color: #fdf7e3;
+
+
+}
+
+.about2{
+  background-color: #fdf7e3;;
+  color: #292C3F;
+ 
+   
+}
+
+.space{
+  padding-left: 50px;
+}
+
+/* CONTACT */
+
+.form-container {
+  margin:0px; 
+  padding:0px;
+  text-align:center;
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-top: 250px;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;               
+   top: 30%;
+   left: 20%;                         
+   transform: translate(0, -50%)
+}
+
+
+.form_div {
+  background-color: black;
+  padding: 20px;
+  width: 300px;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+input {
+  width: 500px;
+  margin-bottom: 5px;
+  height: 25px;
+  border-radius: 5px;
+  border: black;
+  background-color: #faea71;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+#submit {
+  margin-top: 10px;
+  height: 30px;
+  background-color: #cee025;
+  border: solid 2px #cee025;
+  border-radius: 5px;
+}
+
+#message {
+height: 250px;
+width:500px;
+vertical-align: top;
+text-align: top;
+}
+
+@media screen and (max-width: 600px) {
+#message{
+  height:100px;
+}
+}
+
+@media screen and (max-width: 600px) {
+  #name,#message,#subject,#email {
+    width: 200px;
+  
+    
+}
+}
+.formError {
+  color: #a73333;
+  display: none;
+
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+  
