@@ -32,7 +32,7 @@ async function getFood() {
             </div>
             <div class = gallery-link><a class = link-text href="details.html?id=${value.id}">Read More</a></div>
             </div>
-            `; /*classes for gallery goes here*/
+            `; 
             
             });
         
