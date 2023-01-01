@@ -55,42 +55,22 @@ document.querySelector('.sections').innerHTML = htmlStringA;
 
 
 
-/*
-    document.title = foodArray.name;
-    document.querySelector('h1').innerHTML = `${foodArray.name}`;
-    document.querySelector(
-      '.hero__img'
-    ).style.backgroundImage = `url('${foodArray.thumbnail_url}')`;
-    document.querySelector('.time').innerHTML = `timeNOless: ${foodArray.total_time_minutes}`;
-    document.querySelector('.sections').innerHTML = `shitTIbuy: ${foodArray.sections}`;
-    document.querySelector('.instructions').innerHTML = `shtTIdo: ${foodArray.instructions}`;
-    document.querySelector('.yields').innerHTML = `howMUCH: ${foodArray.yields}`;
-  */  
+
 } catch (error) {
 
+  document.querySelector('.alert').innerHTML = alertUser(
+    'Error occured (Cannot load content)',
+    'error'
+);
+
 } finally {
+
+  setTimeout(function () {
+    document.querySelector('.alert').innerHTML = '';
+}, 3000)
 
 }
 }
 
 getResult(id);
 
-/*
-
-const response = await fetch(
-  'https://campspace.one/wp-json/wp/v2/posts/' + postId + "?_embed"
-);
-const jsonResults = await response.json();
-
-document.querySelector('.loader').classList.add('hide');
-
-document.title = jsonResults.title.rendered;
-console.log(jsonResults);
-
-document.querySelector('h1').innerHTML = `${jsonResults.title.rendered}`;
-document.querySelector(
-'.hero__img'
-).style.backgroundImage = `url('${jsonResults._embedded?.["wp:featuredmedia"][0].source_url}')`;
-document.querySelector('.text').innerHTML = `${jsonResults.excerpt.rendered}`
-
-*/
